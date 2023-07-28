@@ -225,3 +225,7 @@ check([1, 2, 3, 4, 5], 3) ➞ true
 function check(arr, el) {
 	return arr.includes(el) ? true : false;
 }
+
+function drop(arr, val = 1) {
+    return arr.slice(val);
+}
