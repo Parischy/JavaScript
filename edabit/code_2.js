@@ -53,6 +53,30 @@ function spaceMeOut(str) {
 	return str.split('').join(' ')
 }
 
+/*
+Skip the Drinks with Too Much Sugar
+skipTooMuchSugarDrinks(["fanta", "cola", "water"]) ➞ ["water"]
+*/
+function skipTooMuchSugarDrinks(drinks) {
+	arr = [];
+	for(let i in drinks ) {
+		if ( drinks[i] != "cola" && drinks[i] != "fanta" ) {
+				arr.push(drinks[i]);
+		}
+	}
+    return arr;
+}
 
-
-
+/*
+How Many D's Are There?
+countDs("My friend Dylan got distracted in school.") ➞ 4
+*/
+function countDs(sentence) {
+	arr = [];
+	for ( let i = 0; i < sentence.length; i++ ) {
+		if ( sentence[i] == "d" || sentence[i] == "D" ) {
+			arr.push(sentence[i]);
+		}
+	}
+	return arr.length;
+}
