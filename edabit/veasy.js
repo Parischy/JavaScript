@@ -15,7 +15,7 @@ function leapYear(year) {
 
 // Return the Last Element in an Array
 function getLastItem(arr) {
-	return arr.pop();
+	return arr.pop()
 }
 
 // Among Us Imposter Formula

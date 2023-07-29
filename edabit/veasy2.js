@@ -80,3 +80,41 @@ function countDs(sentence) {
 	}
 	return arr.length;
 }
+
+/*
+Is the Water Boiling?
+isBoiling("100C") ➞ true
+isBoiling("0F") ➞ false
+*/
+function isBoiling(temp) {
+	let b = parseInt(temp);
+	//console.log(b, temp[temp.length - 1]);
+	if ( temp[temp.length - 1] === "F" && b >= 212 ) {
+		return true
+	} else if ( temp[temp.length - 1] === "C" && b >= 100 ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+function isBoiling(temp) {
+	let b = parseInt(temp);
+	switch (temp[temp.length - 1]) {
+		case "F" :
+			if ( b >= 212 ) {
+				return true;
+			} else {
+				return false;
+			}
+			break;
+		case "C":
+			if ( b >= 100 ) {
+				return true;
+			} else {
+				return false;
+			}
+			break;
+		default:
+			return false;
+	}
+}
