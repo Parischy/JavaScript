@@ -110,3 +110,52 @@ class Person {
     }
 	}
 }
+
+/*
+Number of Squares in an N * N Grid
+numberSquares(2) ➞ 5
+numberSquares(4) ➞ 30
+If n = 0 then the number of squares is 0
+If n = 1 then the number of squares is 1 + 0 = 1
+If n = 2 then the number of squares is 2^2 + 1 = 4 + 1 = 5
+If n = 3 then the number of squares is 3^2 + 5 = 9 + 5 = 14
+*/
+function numberSquares(n) {
+	return (n * (n + 1) * ((2 * n) + 1))/6;
+}
+
+/*
+Check if One Array can be Nested in Another
+canNest([1, 2, 3, 4], [0, 6]) ➞ true
+*/
+function canNest(arr1, arr2) {
+	let firstMin = arr1.sort()[0]
+  let firstMax = arr1.sort()[arr1.length - 1]
+  let secondMin = arr2.sort()[0]
+  let secondMax = arr2.sort()[arr2.length - 1]
+  return firstMin > secondMin && firstMax < secondMax
+}
+
+/*
+Largest Swap
+largestSwap(27) ➞ false // 27 < 72
+*/
+function largestSwap(num) {
+	let arrNum = num.toString().split("")
+  let front = parseInt(arrNum[0])
+  let back = parseInt(arrNum[1])
+  if (front >= back) {
+    return true
+  } else {
+    return false
+  }
+}
+
+/*
+Sort by String Length
+sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
+*/
+function sortByLength(arr) {
+	return arr.sort((a,b) => a.length - b.length);
+}
+
