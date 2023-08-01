@@ -159,3 +159,46 @@ function sortByLength(arr) {
 	return arr.sort((a,b) => a.length - b.length);
 }
 
+/*
+Tuck in Array
+tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]) ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+*/
+function tuckIn(arr1, arr2) {
+	arr1.splice(1,0,...arr2);
+	return arr1;
+}
+
+/*
+Sum of Resistance in Series Circuits
+seriesResistance([1, 5, 6, 3]) ➞ "15 ohms"
+*/
+function seriesResistance(arr) {
+	let num = 0;
+  	for (let i = 0; i < arr.length; i++) {
+    num += arr[i];
+  	}
+	if (num > 1) {
+		return num + " ohms";
+	} else {
+		return num + " ohm";
+	}	
+}
+
+/*
+Count Instances of a Character in a String
+charCount("a", "edabit") ➞ 1
+charCount("c", "Chamber of secrets") ➞ 1
+*/
+function charCount(myChar, str) {
+	let a = str.split("").filter((char) => {
+    if (char === myChar) {
+      return true;
+    } else {
+      return false;
+    }
+  })
+  return a.length
+}
+
+
+
