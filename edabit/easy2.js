@@ -160,3 +160,11 @@ function mean(arr) {
   return Number(sum.toFixed(2));
 }
 
+/*
+Convert a Number to Base-2
+binary(5) ➞ "101"
+// 1*1 + 1*4 = 5
+*/
+function binary(decimal) {
+	return decimal.toString(2);
+}
