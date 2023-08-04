@@ -168,3 +168,56 @@ binary(5) ➞ "101"
 function binary(decimal) {
 	return decimal.toString(2);
 }
+
+/*
+Number Split
+numberSplit(10) ➞ [5, 5]
+numberSplit(11) ➞ [5, 6]
+*/
+function numberSplit(n) {
+  if ( n % 2 == 0 ) {
+    return [ n / 2, n / 2];
+  } else {
+    return [ Math.floor( n / 2 ), Math.ceil( n / 2 ) ];
+  }
+}
+
+//Hex to Binary
+function toBinary(num) {
+	return num.toString(2)
+}
+
+/*
+Highest Digit
+highestDigit(2) ➞ 2
+highestDigit(377401) ➞ 7
+*/
+function highestDigit(number) {
+	let str = number.toString().split("")
+  let count = str.sort()[str.length - 1]
+  return parseInt(count);
+}
+
+/*
+How Much is True?
+countTrue([true, false, false, true, false]) ➞ 2
+countTrue([false, false, false, false]) ➞ 0
+*/
+function countTrue(arr) {
+	return arr.filter((a) => a).length
+}
+
+/*
+Say "Hello" Say "Bye"
+sayHelloBye("alon", 1) ➞ "Hello Alon"
+sayHelloBye("Tomi", 0) ➞ "Bye Tomi"
+*/
+function sayHelloBye(name, num) {
+	let a = name.charAt(0).toUpperCase() + name.slice(1);
+  if(num === 1) {
+    return "Hello " + a;
+  } else if (num === 0) {
+    return "Bye " + a;
+  }
+}
+
