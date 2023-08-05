@@ -221,3 +221,22 @@ function sayHelloBye(name, num) {
   }
 }
 
+/*
+Convenience Store
+changeEnough([2, 100, 0, 0], 14.11) ➞ false
+changeEnough([0, 0, 20, 5], 0.75) ➞ true
+*/
+function changeEnough(change, amountDue) {
+	let sum = (change[0] * 0.25) + (change[1] * 0.1) + (change[2] * 0.05) + (change[3] * 0.01);
+	return sum >= amountDue;
+}
+
+/*
+Derivative of a Function
+derivative(1, 4) ➞ 1
+derivative(3, -2) ➞ 12
+*/
+function derivative(b, m) {
+	return b * Math.pow(m, b - 1);
+}
+
