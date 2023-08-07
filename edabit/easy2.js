@@ -240,3 +240,49 @@ function derivative(b, m) {
 	return b * Math.pow(m, b - 1);
 }
 
+/*
+Convert Key, Values in an Object to Array
+objectToArray({
+  D: 1,
+  B: 2,
+  C: 3
+}) ➞ [["D", 1], ["B", 2], ["C", 3]]
+
+objectToArray({
+  likes: 2,
+  dislikes: 3,
+  followers: 10
+}) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]
+*/
+function objectToArray(obj) {
+	let keys = Object.keys(obj);
+  let value = Object.values(obj);
+  let result = [];
+  for (let i = 0; i < keys.length; i++) {
+    result.push([keys[i], value[i]]);
+  }
+  return result;
+}
+
+/*
+Array of Multiples
+arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+*/
+function arrayOfMultiples (num, length) {
+	let result = []
+  for (let i = 1; i <= length; i++) {
+    result.push(num * i)
+  }
+  return result
+}
+
+/*
+Integer Digits Count
+count(318) ➞ 3
+count(-92563) ➞ 5
+*/
+function count(n) {
+  return n.toString().replace("-", "").length
+}
+
