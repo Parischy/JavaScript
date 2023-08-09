@@ -286,3 +286,14 @@ function count(n) {
   return n.toString().replace("-", "").length
 }
 
+/*
+A Redundant Function
+const f1 = redundant("apple")
+f1() ➞ "apple"
+const f2 = redundant("pear")
+f2() ➞ "pear"
+*/
+function redundant(str) {
+  return ()=> str;
+}
+
