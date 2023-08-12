@@ -53,3 +53,14 @@ function addsNum(n) {
     return (x) => x+n
 }
 
+//Travelling Salesman Problem
+function paths(n) {
+	let num = n;
+  let result = 1;
+  while (num > 0) {
+    result *= num;
+    num--;
+  }
+  return result;
+}
+
