@@ -64,3 +64,36 @@ function paths(n) {
   return result;
 }
 
+/*
+25-Mile Marathon
+marathonDistance([1, 2, 3, 4]) ➞ false
+marathonDistance([1, 9, 5, 8, 2]) ➞ true
+*/
+function marathonDistance(d) {
+	let sum = 0
+  for (let i = 0; i < d.length; i++) {
+    sum += Math.abs(d[i])
+  }
+  if (sum == 25) {
+    return true
+  } else {
+    return false
+  }
+}
+
+//Volume of a Cone
+function coneVolume(h, r) {
+	let sum = (( Math.PI * ( r ** 2 ) * h ) / 3).toFixed(2);
+	return parseFloat(sum);
+}
+
+/*
+Get the Area of a Country
+areaOfCountry("Russia", 17098242) ➞ "Russia is 11.48% of the total world's landmass"
+*/
+function areaOfCountry(name, area) {
+	let total = 148940000;
+  let percentage = ((area / total) * 100).toFixed(2)
+  return `${name} is ${percentage}% of the total world's landmass`
+}
+
