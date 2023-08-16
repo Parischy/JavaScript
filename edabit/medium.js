@@ -97,3 +97,57 @@ function areaOfCountry(name, area) {
   return `${name} is ${percentage}% of the total world's landmass`
 }
 
+/*
+Reverse Words in a String
+reverseWords(" the sky is blue") ➞ "blue is sky the"
+reverseWords("hello   world!  ") ➞ "world! hello"
+*/
+function reverseWords(string) {
+	let result = []
+  let wordArr = string.split(" ")
+  for (let i = wordArr.length - 1; i >= 0; i--) {
+    result.push(wordArr[i])
+  }
+  return result.join(" ")
+}
+
+/*
+Let's Sort This Array!
+ascDesNone([4, 3, 2, 1], "Asc" ) ➞ [1, 2, 3, 4]
+ascDesNone([7, 8, 11, 66], "Des") ➞ [66, 11, 8, 7]
+*/
+function ascDesNone(arr, str) {
+	if (str == "Asc") {
+    return arr.sort((a, b) => a - b)
+  } else if (str == "Des") {
+    return arr.sort((a, b) => b - a)
+  } else {
+    return arr
+  }
+}
+
+/*
+Find the Second Largest Number
+secondLargest([10, 40, 30, 20, 50]) ➞ 40
+*/
+function secondLargest(arr) {
+  return arr.sort((a, b) => a - b)[arr.length - 2]
+}
+
+//How Heavy Is It?
+function weight(r, h) {
+	let volume = (Math.PI * Math.pow(r, 2) * (h / 1000))
+  return parseFloat(volume.toFixed(2))
+}
+
+//Temperature Conversion
+function tempConversion(celsius) {
+	let f = parseFloat((celsius * 9 / 5 + 32).toFixed(2))
+  let k = parseFloat((celsius + 273.15).toFixed(2))
+  if (k < 0) {
+    return "Invalid"
+  }
+
+  return [f, k]
+}
+
