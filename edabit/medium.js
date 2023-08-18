@@ -151,3 +151,15 @@ function tempConversion(celsius) {
   return [f, k]
 }
 
+//Pythagorean Triplet
+function isTriplet(n1, n2, n3) {
+	let order = [n1, n2, n3].sort((a, b) => a - b);
+  let a = ( order[0] ** 2 ) + ( order[1] ** 2 );
+  let b = ( order[2] ** 2 );
+  if ( a == b ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
